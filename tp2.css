@@ -37,13 +37,16 @@ tr:nth-child(even) {
   box-sizing: border-box;
 }
 
-.row {
-  display: flex;
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  align-items: center;
 }
 
-.column {
-  flex: 33.33%;
-  padding: 5px;
+.row::after {
+  clear: both;
+  display: table;
 }
 
 .bannière {
@@ -87,8 +90,8 @@ tr:nth-child(even) {
   color: white;
 }
 
-body {
-    background-color: rgb(247, 245, 245);
+html {
+    background-color:rgb(247, 245, 245);
   }
 
 .container {
@@ -98,7 +101,8 @@ body {
   }
 
   img {
-    max-width: 80%
+    max-width: 50%;
+    max-height: 50%;
   }
     
   .image {
